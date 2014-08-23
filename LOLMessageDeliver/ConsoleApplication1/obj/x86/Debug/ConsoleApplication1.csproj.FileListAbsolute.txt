@@ -1,0 +1,6 @@
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb

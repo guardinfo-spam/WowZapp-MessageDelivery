@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/LOLMessageDelivery" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LOLMessageDelivery" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:54381/LOLConnect.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:54381/LOLConnect.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LOLCodeLibrary.ErrorsManagement" />
+  <xs:complexType name="Message">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfGeneral.Error" />
+      <xs:element minOccurs="0" name="FromAccountID" type="ser:guid" />
+      <xs:element minOccurs="0" name="MessageConfirmed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MessageID" type="ser:guid" />
+      <xs:element minOccurs="0" name="MessageRecipients" nillable="true" type="tns:ArrayOfMessage.MessageRecipient" />
+      <xs:element minOccurs="0" name="MessageSent" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MessageSteps" nillable="true" type="tns:ArrayOfMessageStep" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Message" nillable="true" type="tns:Message" />
+  <xs:complexType name="ArrayOfGeneral.Error">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="General.Error" type="tns:General.Error" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGeneral.Error" nillable="true" type="tns:ArrayOfGeneral.Error" />
+  <xs:complexType name="General.Error">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorTitle" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LOLCodeLibrary.ErrorsManagement" minOccurs="0" name="ErrorType" type="q1:SystemTypes.ErrorMessage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="General.Error" nillable="true" type="tns:General.Error" />
+  <xs:complexType name="ArrayOfMessage.MessageRecipient">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Message.MessageRecipient" type="tns:Message.MessageRecipient" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMessage.MessageRecipient" nillable="true" type="tns:ArrayOfMessage.MessageRecipient" />
+  <xs:complexType name="Message.MessageRecipient">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountID" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsRead" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Message.MessageRecipient" nillable="true" type="tns:Message.MessageRecipient" />
+  <xs:complexType name="ArrayOfMessageStep">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MessageStep" nillable="true" type="tns:MessageStep" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMessageStep" nillable="true" type="tns:ArrayOfMessageStep" />
+  <xs:complexType name="MessageStep">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentPackItemID" type="xs:int" />
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfGeneral.Error" />
+      <xs:element minOccurs="0" name="MessageID" type="ser:guid" />
+      <xs:element minOccurs="0" name="MessageText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StepID" type="ser:guid" />
+      <xs:element minOccurs="0" name="StepNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="StepType" type="tns:MessageStep.StepTypes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MessageStep" nillable="true" type="tns:MessageStep" />
+  <xs:simpleType name="MessageStep.StepTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Text">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Comix">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Comicon">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Animation">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Video">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Polling">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SoundFX">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Voice">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Emoticon">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MessageStep.StepTypes" nillable="true" type="tns:MessageStep.StepTypes" />
+  <xs:complexType name="ArrayOfMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Message" nillable="true" type="tns:Message" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMessage" nillable="true" type="tns:ArrayOfMessage" />
+  <xs:complexType name="PollingStep">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfGeneral.Error" />
+      <xs:element minOccurs="0" name="HasResponded" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MessageID" type="ser:guid" />
+      <xs:element minOccurs="0" name="PollingAnswer1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PollingAnswer2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PollingAnswer3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PollingAnswer4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PollingData1" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="PollingData2" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="PollingData3" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="PollingData4" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="PollingQuestion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StepNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PollingStep" nillable="true" type="tns:PollingStep" />
+  <xs:complexType name="LOLMessage.SurveyResult">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Answer1Count" type="xs:int" />
+      <xs:element minOccurs="0" name="Answer1Percent" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Answer2Count" type="xs:int" />
+      <xs:element minOccurs="0" name="Answer2Percent" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Answer3Count" type="xs:int" />
+      <xs:element minOccurs="0" name="Answer3Percent" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Answer4Count" type="xs:int" />
+      <xs:element minOccurs="0" name="Answer4Percent" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Responses" type="xs:int" />
+      <xs:element minOccurs="0" name="StepID" type="ser:guid" />
+      <xs:element minOccurs="0" name="StepNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LOLMessage.SurveyResult" nillable="true" type="tns:LOLMessage.SurveyResult" />
+  <xs:complexType name="ArrayOfLOLMessage.SurveyResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LOLMessage.SurveyResult" type="tns:LOLMessage.SurveyResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLOLMessage.SurveyResult" nillable="true" type="tns:ArrayOfLOLMessage.SurveyResult" />
+</xs:schema>

@@ -1,0 +1,13 @@
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\LOLMessageDeliver\bin\LOLMessageDeliver.dll
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\LOLMessageDeliver\bin\LOLMessageDeliver.pdb
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\LOLMessageDeliver\bin\LOLCodeLibrary.dll
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\LOLMessageDeliver\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\LOLMessageDeliver\bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\LOLMessageDeliver\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\LOLMessageDeliver\bin\Microsoft.Practices.Unity.dll
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\LOLMessageDeliver\bin\Microsoft.Practices.Unity.Interception.dll
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\LOLMessageDeliver\bin\RazorEngine.dll
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\LOLMessageDeliver\bin\LOLCodeLibrary.pdb
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\LOLMessageDeliver\obj\Debug\LOLMessageDeliver.csprojResolveAssemblyReference.cache
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\LOLMessageDeliver\obj\Debug\LOLMessageDeliver.dll
+C:\Development\SatoriIT\LOL Message Delivery\LOLMessageDeliver\LOLMessageDeliver\obj\Debug\LOLMessageDeliver.pdb

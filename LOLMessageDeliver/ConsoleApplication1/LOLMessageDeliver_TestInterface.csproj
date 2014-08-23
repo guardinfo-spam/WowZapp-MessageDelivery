@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{36623A7E-15E3-47D6-9287-6809E66D1611}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <AssemblyName>ConsoleApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ImageHandler.cs" />
+    <Compile Include="ITestable.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\LOLConnect2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TestBase.cs" />
+    <Compile Include="Test_MessageCreate.cs" />
+    <Compile Include="Test_MessageGetConversations.cs" />
+    <Compile Include="Test_MessageGetFrom.cs" />
+    <Compile Include="Test_MessageGetNew.cs" />
+    <Compile Include="Test_MessageGetReplyAll.cs" />
+    <Compile Include="Test_MessageGetStepData.cs" />
+    <Compile Include="Test_MessageGetStepObject.cs" />
+    <Compile Include="Test_MessageGetSteps.cs" />
+    <Compile Include="Test_MessageMarkRead.cs" />
+    <Compile Include="Test_MessagesGetListSentToUser.cs" />
+    <Compile Include="Test_MessageStepDataSave.cs" />
+    <Compile Include="Test_PollingStepGet.cs" />
+    <Compile Include="Test_PollingStepGetResults.cs" />
+    <Compile Include="Test_PollingStepGetResultsList.cs" />
+    <Compile Include="Test_PollingStepHasResponded.cs" />
+    <Compile Include="Test_PollingStepResponse.cs" />
+    <Compile Include="Test_PollingStepSave.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\LOLMessageDelivery.General.datasource" />
+    <None Include="Properties\DataSources\LOLMessageDelivery.LOLMessage.datasource" />
+    <None Include="Properties\DataSources\LOLMessageDelivery.Message.datasource" />
+    <None Include="Properties\DataSources\LOLMessageDelivery.MessageStep.datasource" />
+    <None Include="Properties\DataSources\LOLMessageDelivery.PollingStep.datasource" />
+    <None Include="Service References\LOLConnect2\LOLConnect.wsdl" />
+    <None Include="Service References\LOLConnect2\LOLConnect.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LOLConnect2\LOLConnect1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LOLConnect2\LOLConnect2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LOLConnect2\LOLConnect3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LOLConnect2\LOLConnect4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LOLConnect2\LOLMessage.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\LOL Account Management\LOLAccountManagement\LOLCodeLibrary\LOLCodeLibrary.csproj">
+      <Project>{4D289599-7450-48FF-8662-131E5BFE0707}</Project>
+      <Name>LOLCodeLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LOLMessageDeliver\LOLMessageDeliver.csproj">
+      <Project>{F46D618C-3FD7-457D-9FF6-D1C98AC9B9D8}</Project>
+      <Name>LOLMessageDeliver</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\LOLConnect2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LOLConnect2\LOLConnect.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LOLConnect2\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LOLConnect2\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LOLConnect2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

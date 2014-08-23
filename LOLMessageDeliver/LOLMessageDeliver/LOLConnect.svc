@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="LOLMessageDelivery.LOLMessage" CodeBehind="LOLMessage.svc.cs" %>

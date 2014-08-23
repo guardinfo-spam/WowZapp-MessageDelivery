@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://localhost:54381/LOLConnect.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://localhost:54381/LOLConnect.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:54381/LOLConnect.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LOLMessageDelivery" />
+      <xsd:import schemaLocation="http://localhost:54381/LOLConnect.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LOLCodeLibrary.ErrorsManagement" />
+      <xsd:import schemaLocation="http://localhost:54381/LOLConnect.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="LOLMessage_MessageCreate_InputMessage">
+    <wsdl:part name="parameters" element="MessageCreate" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageCreate_OutputMessage">
+    <wsdl:part name="parameters" element="MessageCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageConfirmSend_InputMessage">
+    <wsdl:part name="parameters" element="MessageConfirmSend" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageConfirmSend_OutputMessage">
+    <wsdl:part name="parameters" element="MessageConfirmSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageGetReplyAll_InputMessage">
+    <wsdl:part name="parameters" element="MessageGetReplyAll" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageGetReplyAll_OutputMessage">
+    <wsdl:part name="parameters" element="MessageGetReplyAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageGetNew_InputMessage">
+    <wsdl:part name="parameters" element="MessageGetNew" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageGetNew_OutputMessage">
+    <wsdl:part name="parameters" element="MessageGetNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageGetSteps_InputMessage">
+    <wsdl:part name="parameters" element="MessageGetSteps" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageGetSteps_OutputMessage">
+    <wsdl:part name="parameters" element="MessageGetStepsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageMarkRead_InputMessage">
+    <wsdl:part name="parameters" element="MessageMarkRead" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageMarkRead_OutputMessage">
+    <wsdl:part name="parameters" element="MessageMarkReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageGetFrom_InputMessage">
+    <wsdl:part name="parameters" element="MessageGetFrom" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageGetFrom_OutputMessage">
+    <wsdl:part name="parameters" element="MessageGetFromResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageGetConversations_InputMessage">
+    <wsdl:part name="parameters" element="MessageGetConversations" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageGetConversations_OutputMessage">
+    <wsdl:part name="parameters" element="MessageGetConversationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageGetStepData_InputMessage">
+    <wsdl:part name="parameters" element="MessageGetStepData" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageGetStepData_OutputMessage">
+    <wsdl:part name="parameters" element="MessageGetStepDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageStepDataSave_InputMessage">
+    <wsdl:part name="parameters" element="MessageStepDataSave" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageStepDataSave_OutputMessage">
+    <wsdl:part name="parameters" element="MessageStepDataSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessagesGetListSentToUser_InputMessage">
+    <wsdl:part name="parameters" element="MessagesGetListSentToUser" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessagesGetListSentToUser_OutputMessage">
+    <wsdl:part name="parameters" element="MessagesGetListSentToUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_PollingStepGet_InputMessage">
+    <wsdl:part name="parameters" element="PollingStepGet" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_PollingStepGet_OutputMessage">
+    <wsdl:part name="parameters" element="PollingStepGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_PollingStepSave_InputMessage">
+    <wsdl:part name="parameters" element="PollingStepSave" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_PollingStepSave_OutputMessage">
+    <wsdl:part name="parameters" element="PollingStepSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_PollingStepResponse_InputMessage">
+    <wsdl:part name="parameters" element="PollingStepResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_PollingStepResponse_OutputMessage">
+    <wsdl:part name="parameters" element="PollingStepResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_PollingStepHasResponded_InputMessage">
+    <wsdl:part name="parameters" element="PollingStepHasResponded" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_PollingStepHasResponded_OutputMessage">
+    <wsdl:part name="parameters" element="PollingStepHasRespondedResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_PollingStepGetResults_InputMessage">
+    <wsdl:part name="parameters" element="PollingStepGetResults" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_PollingStepGetResults_OutputMessage">
+    <wsdl:part name="parameters" element="PollingStepGetResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_PollingStepGetResultsList_InputMessage">
+    <wsdl:part name="parameters" element="PollingStepGetResultsList" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_PollingStepGetResultsList_OutputMessage">
+    <wsdl:part name="parameters" element="PollingStepGetResultsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_DeleteTestData_InputMessage">
+    <wsdl:part name="parameters" element="DeleteTestData" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_DeleteTestData_OutputMessage">
+    <wsdl:part name="parameters" element="DeleteTestDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageGetStepObject_InputMessage">
+    <wsdl:part name="parameters" element="MessageGetStepObject" />
+  </wsdl:message>
+  <wsdl:message name="LOLMessage_MessageGetStepObject_OutputMessage">
+    <wsdl:part name="parameters" element="MessageGetStepObjectResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LOLMessage">
+    <wsdl:operation name="MessageCreate">
+      <wsdl:input wsaw:Action="urn:LOLMessage/MessageCreate" message="LOLMessage_MessageCreate_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/MessageCreateResponse" message="LOLMessage_MessageCreate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MessageConfirmSend">
+      <wsdl:input wsaw:Action="urn:LOLMessage/MessageConfirmSend" message="LOLMessage_MessageConfirmSend_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/MessageConfirmSendResponse" message="LOLMessage_MessageConfirmSend_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MessageGetReplyAll">
+      <wsdl:input wsaw:Action="urn:LOLMessage/MessageGetReplyAll" message="LOLMessage_MessageGetReplyAll_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/MessageGetReplyAllResponse" message="LOLMessage_MessageGetReplyAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MessageGetNew">
+      <wsdl:input wsaw:Action="urn:LOLMessage/MessageGetNew" message="LOLMessage_MessageGetNew_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/MessageGetNewResponse" message="LOLMessage_MessageGetNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MessageGetSteps">
+      <wsdl:input wsaw:Action="urn:LOLMessage/MessageGetSteps" message="LOLMessage_MessageGetSteps_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/MessageGetStepsResponse" message="LOLMessage_MessageGetSteps_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MessageMarkRead">
+      <wsdl:input wsaw:Action="urn:LOLMessage/MessageMarkRead" message="LOLMessage_MessageMarkRead_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/MessageMarkReadResponse" message="LOLMessage_MessageMarkRead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MessageGetFrom">
+      <wsdl:input wsaw:Action="urn:LOLMessage/MessageGetFrom" message="LOLMessage_MessageGetFrom_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/MessageGetFromResponse" message="LOLMessage_MessageGetFrom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MessageGetConversations">
+      <wsdl:input wsaw:Action="urn:LOLMessage/MessageGetConversations" message="LOLMessage_MessageGetConversations_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/MessageGetConversationsResponse" message="LOLMessage_MessageGetConversations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MessageGetStepData">
+      <wsdl:input wsaw:Action="urn:LOLMessage/MessageGetStepData" message="LOLMessage_MessageGetStepData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/MessageGetStepDataResponse" message="LOLMessage_MessageGetStepData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MessageStepDataSave">
+      <wsdl:input wsaw:Action="urn:LOLMessage/MessageStepDataSave" message="LOLMessage_MessageStepDataSave_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/MessageStepDataSaveResponse" message="LOLMessage_MessageStepDataSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MessagesGetListSentToUser">
+      <wsdl:input wsaw:Action="urn:LOLMessage/MessagesGetListSentToUser" message="LOLMessage_MessagesGetListSentToUser_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/MessagesGetListSentToUserResponse" message="LOLMessage_MessagesGetListSentToUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PollingStepGet">
+      <wsdl:input wsaw:Action="urn:LOLMessage/PollingStepGet" message="LOLMessage_PollingStepGet_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/PollingStepGetResponse" message="LOLMessage_PollingStepGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PollingStepSave">
+      <wsdl:input wsaw:Action="urn:LOLMessage/PollingStepSave" message="LOLMessage_PollingStepSave_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/PollingStepSaveResponse" message="LOLMessage_PollingStepSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PollingStepResponse">
+      <wsdl:input wsaw:Action="urn:LOLMessage/PollingStepResponse" message="LOLMessage_PollingStepResponse_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/PollingStepResponseResponse" message="LOLMessage_PollingStepResponse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PollingStepHasResponded">
+      <wsdl:input wsaw:Action="urn:LOLMessage/PollingStepHasResponded" message="LOLMessage_PollingStepHasResponded_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/PollingStepHasRespondedResponse" message="LOLMessage_PollingStepHasResponded_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PollingStepGetResults">
+      <wsdl:input wsaw:Action="urn:LOLMessage/PollingStepGetResults" message="LOLMessage_PollingStepGetResults_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/PollingStepGetResultsResponse" message="LOLMessage_PollingStepGetResults_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PollingStepGetResultsList">
+      <wsdl:input wsaw:Action="urn:LOLMessage/PollingStepGetResultsList" message="LOLMessage_PollingStepGetResultsList_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/PollingStepGetResultsListResponse" message="LOLMessage_PollingStepGetResultsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTestData">
+      <wsdl:input wsaw:Action="urn:LOLMessage/DeleteTestData" message="LOLMessage_DeleteTestData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/DeleteTestDataResponse" message="LOLMessage_DeleteTestData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MessageGetStepObject">
+      <wsdl:input wsaw:Action="urn:LOLMessage/MessageGetStepObject" message="LOLMessage_MessageGetStepObject_InputMessage" />
+      <wsdl:output wsaw:Action="urn:LOLMessage/MessageGetStepObjectResponse" message="LOLMessage_MessageGetStepObject_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
